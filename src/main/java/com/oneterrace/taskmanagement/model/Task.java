@@ -1,7 +1,5 @@
 package com.oneterrace.taskmanagement.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,10 +19,10 @@ public class Task {
 	private String title;
 
 	@Column(name = "expected_date")
-	private Date expectedDate;
+	private String expectedDate;
 
 	@Column(name = "completed_date")
-	private Date completedDate;
+	private String completedDate;
 
 	@Column(name = "priority")
 	private String priority;
@@ -34,4 +32,60 @@ public class Task {
 
 	@Column(name = "deleted_status")
 	private String deletedStatus;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getExpectedDate() {
+		return expectedDate;
+	}
+
+	public void setExpectedDate(String expectedDate) {
+		this.expectedDate = expectedDate;
+	}
+
+	public String getCompletedDate() {
+		return completedDate;
+	}
+
+	public void setCompletedDate(String completedDate) {
+		this.completedDate = completedDate;
+	}
+
+	public String getPriority() {
+		return priority;
+	}
+
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+
+	public String getCompletedStatus() {
+		return completedStatus;
+	}
+
+	public void setCompletedStatus(String completedStatus) {
+		this.completedStatus = completedStatus;
+	}
+
+	public String getDeletedStatus() {
+		return deletedStatus;
+	}
+
+	public void setDeletedStatus(String deletedStatus) {
+		this.deletedStatus = deletedStatus;
+	}
 }
